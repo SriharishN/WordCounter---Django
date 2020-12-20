@@ -1,0 +1,23 @@
+{% load static %}
+<html>
+<head>
+<title>Word Counter</title>
+<link rel="icon" href="{% static 'images/wc_logo.png' %}" type="image/x-icon">
+<link rel="stylesheet" type="text/css" href="{% static 'css/count.css' %}">
+</head>
+<div class="header">
+<img src="{% static 'images/logo_wordCounter.jpg'%}" alt="logo"></img>
+<h1 class="header-title"><a href="{% url '' %}">Home</a></h1>
+</div>
+<h1>Total words in the given passage {{wordListLength}} words</h1>
+<p>{{wordContent}}</p>
+<br/>
+<p>The most occurred word : <b>{{maxWord}}</b> </p>
+<br/>
+<h1> Frequency count of the given passage </h1>
+<br/>
+{% for word, countTotal in wordDict %}
+<p>{{ word }} -> {{ countTotal }}</p>
+<br/>
+{% endfor %}
+</html>

@@ -1,0 +1,28 @@
+.header{
+    background-color: rgb(35, 160, 108);
+    display: flex;
+  }
+  body{
+    background-color: rgb(247, 233, 233);
+    margin:0;
+  }
+  .header-title{
+    margin:auto;
+  }
+  a {
+      text-decoration: none;
+      color: black;
+  }
+  a:hover{
+      background-color: lightpink;
+      color: black;
+      border: none;
+      border-radius: 5px;
+      padding: 3px;
+  }
+  p{
+      margin: 10px;
+  }
+  h1{
+      margin: 10px;
+  }

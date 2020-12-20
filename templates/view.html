@@ -1,0 +1,23 @@
+{% load static %}
+<html>
+<head>
+<title>Word Counter</title>
+<link rel="icon" href="{% static 'images/wc_logo.png' %}" type="image/x-icon">
+<link rel="stylesheet" type="text/css" href="{% static 'css/view.css' %}">
+</head>
+<div class="header">
+<img src="{% static 'images/logo_wordCounter.jpg'%}" alt="logo"></img>
+<h1 class="header-title">Word Counter - Count the words and its frequency</h1>
+</div>
+<div class="box">
+<div class="container">
+<h1>Welcome to the Word Counter</h1>
+<form method="POST" action="{% url 'wordCount' %}">
+{% csrf_token %}
+<textarea rows=20 cols=70 name="wordContent" placeholder="Type your text here ...."></textarea>
+<br/>
+<input type="submit" class="submit-button" value="Get Count"></input>
+</form>
+</div>
+</div>
+</html>
